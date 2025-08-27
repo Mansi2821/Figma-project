@@ -1,0 +1,133 @@
+/* ===== Partners Section ===== */
+.partners-section {
+  padding: 100px 20px; /* Increased to match other sections */
+  background-color: #fff;
+  text-align: center;
+
+  /* Animation initial state */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.partners-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.partners-section h2 {
+  font-size: 36px; /* Bigger for emphasis */
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 15px;
+}
+
+.partners-section .subtitle {
+  font-size: 16px;
+  color: #6c6c6c;
+  margin-bottom: 60px;
+  line-height: 1.6;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Larger min size */
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto 60px;
+}
+
+.partner-card {
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.partner-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.partner-card p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6c6c6c;
+  margin-bottom: 12px;
+}
+
+.partner-card img {
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+.partners-section .btn {
+  background: #2196f3;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.partners-section .btn:hover {
+  background: #1976d2;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 1024px) {
+  .partners-section {
+    padding: 80px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partners-section {
+    padding: 60px 15px;
+  }
+
+  .partners-section h2 {
+    font-size: 28px;
+  }
+
+  .partners-section .subtitle {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .partners-grid {
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .partner-card img {
+    max-width: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-grid {
+    grid-template-columns: 1fr 1fr; /* Two per row for better mobile layout */
+    gap: 15px;
+  }
+
+  .partner-card {
+    padding: 15px;
+  }
+
+  .partner-card img {
+    max-width: 70px;
+  }
+}
+
+
+

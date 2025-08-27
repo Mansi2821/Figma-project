@@ -1,0 +1,172 @@
+/* ===== Pricing Section ===== */
+.pricing-section {
+  padding: 80px 20px;
+  background: #1f2a44;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.pricing-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pricing-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.pricing-section p {
+  color: #d1d1d1;
+  font-size: 1rem;
+  margin-bottom: 50px;
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 25px;
+}
+
+.price sup {
+  font-size: 1rem;
+  vertical-align: super;
+}
+
+.price small {
+  display: block;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+}
+
+ul li {
+  padding: 8px 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+button {
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #1976d2;
+}
+
+/* ===== Featured Card (Middle) ===== */
+.featured {
+  background: #2196f3;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.featured h3,
+.featured .price,
+.featured .subtitle,
+.featured ul li,
+.featured .price small {
+  color: #fff;
+}
+
+.featured button {
+  background: #fff;
+  color: #2196f3;
+}
+
+.featured button:hover {
+  background: #f1f1f1;
+}
+
+/* ===== Hover Animation ===== */
+.pricing-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-card:hover:not(.featured) {
+  background: #2196f3;
+  color: #fff;
+}
+
+.pricing-card:hover:not(.featured) h3,
+.pricing-card:hover:not(.featured) .price,
+.pricing-card:hover:not(.featured) .subtitle,
+.pricing-card:hover:not(.featured) ul li,
+.pricing-card:hover:not(.featured) .price small {
+  color: #fff;
+}
+
+.pricing-card:hover:not(.featured) button {
+  background: #fff;
+  color: #2196f3;
+}
+
+.pricing-card:hover:not(.featured) button:hover {
+  background: #f1f1f1;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .pricing-section h2 {
+    font-size: 2rem;
+  }
+
+  .pricing-section p {
+    font-size: 0.9rem;
+  }
+
+  .price {
+    font-size: 2rem;
+  }
+}
+
+
+

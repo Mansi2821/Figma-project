@@ -1,0 +1,67 @@
+/* ====== Video Section ====== */
+#video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+#video-section .video-container {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+#video-section video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* Play Icon Styling */
+#video-section .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  background: #2196f3;
+  color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease 0.3s, visibility 0.4s ease 0.3s; /* Delay when showing */
+}
+
+/* Hide instantly when playing */
+#video-section .play-icon.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* No delay when hiding */
+}
+
+
+/* Video Section Animation */
+#video-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#video-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

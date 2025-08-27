@@ -1,0 +1,246 @@
+/* ====== Global Reset ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ====== Navbar ====== */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+#navbar.scrolled {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+}
+
+#navbar .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+#navbar .logo img {
+  height: 35px;
+}
+
+/* ====== Nav Links ====== */
+#navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+#navbar .nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+#navbar .nav-links li a:hover {
+  color: #4dabff;
+}
+
+/* ====== Social Icons ====== */
+#navbar .social-icons a {
+  color: white;
+  margin-left: 15px;
+  font-size: 22px;
+  transition: color 0.3s ease;
+}
+
+#navbar .social-icons a:hover {
+  color: #4dabff;
+}
+
+/* ====== Hamburger Menu (Mobile) ====== */
+#menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ====== Overlay for Mobile Menu ====== */
+#menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 998; /* BELOW side panel */
+}
+
+#menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ====== Side Panel Menu ====== */
+#navbar .nav-links {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  height: 100%;
+  width: 250px;
+  background: rgba(0, 0, 0, 0.75);
+  padding-top: 60px;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 999; /* ABOVE overlay */
+  transition: left 0.4s ease;
+}
+
+#navbar .nav-links.active {
+  left: 0;
+}
+
+/* Menu links inside panel with left margin */
+#navbar .nav-links li {
+  margin-left: 20px;
+}
+
+
+
+
+
+/* Close button in side panel */
+.close-menu {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile social icons (inside side panel) */
+.mobile-social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.mobile-social-icons a {
+  color: white;
+  font-size: 22px;
+}
+
+/* Hide close button in desktop */
+@media (min-width: 901px) {
+  .close-menu {
+    display: none;
+  }
+}
+
+/* Hide mobile social icons in desktop */
+@media (min-width: 901px) {
+  .mobile-social-icons {
+    display: none !important;
+  }
+}
+
+/* Hide desktop social icons in mobile */
+@media (max-width: 900px) {
+  .desktop-icons {
+    display: none !important;
+  }
+}
+
+/* ====== Desktop Layout Adjustments ====== */
+@media (min-width: 901px) {
+  #menu-toggle {
+    display: none;
+  }
+  #navbar .nav-links {
+    position: static;
+    flex-direction: row;
+    background: none;
+    padding: 0;
+    height: auto;
+    width: auto;
+    gap: 25px;
+  }
+}
+
+/* ====== Mobile Layout ====== */
+@media (max-width: 900px) {
+  #menu-toggle {
+    display: block;
+  }
+}
+
+/* ====== Hero Section ====== */
+#home {
+  height: 100vh;
+  background: url('/logos/hero-bg.jpg') center center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 100%, 0 84%);
+}
+
+#home::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: 1;
+}
+
+#home .hero-content {
+  position: relative;
+  color: white;
+  max-width: 700px;
+  padding: 0 20px;
+  z-index: 3;
+}
+
+#home h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#home p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+#home .btn {
+  background: #2196f3;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+#home .btn:hover {
+  background: #1976d2;
+}
+

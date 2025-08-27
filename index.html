@@ -4,38 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Figma Land</title>
-  <!-- AOS CSS -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- AOS CSS (Optional, can remove if not using AOS) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+  <!-- Your CSS files -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/features.css">
+  <link rel="stylesheet" href="css/video-section.css">
+  <link rel="stylesheet" href="css/organize-newsletter.css">
+  <link rel="stylesheet" href="css/partners.css">
+  <link rel="stylesheet" href="css/testimonial.css">
+  <link rel="stylesheet" href="css/pricing.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+
   <!-- Font Awesome for Social Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+    <!-- ======================NAVBAR=================== -->
   <!-- Navbar -->
   <header id="navbar">
     <nav class="navbar">
-      <div class="logo">FIGMA LAND</div>
       
-      <!-- Hamburger Menu -->
+      <!-- Hamburger Menu (Mobile) -->
       <div class="menu-toggle" id="menu-toggle">
         <i class="fas fa-bars"></i>
       </div>
       
+      <!-- Navigation Links (Side Panel in Mobile) -->
       <ul class="nav-links" id="nav-links">
+        <!-- Close button inside mobile menu -->
+        <span class="close-menu" id="close-menu">&times;</span>
+
         <li><a href="#home">Home</a></li>
         <li><a href="#product">Product</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
+
+        <!-- Social Icons (Mobile View Inside Menu) -->
+        <div class="mobile-social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
       </ul>
-      
-      <div class="social-icons">
+
+      <!-- Logo -->
+      <div class="logo">
+        <img src="logos/logo.png" alt="Logo">
+      </div>
+
+      <!-- Social Icons (Desktop View Only, far right) -->
+      <div class="social-icons desktop-icons">
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </nav>
   </header>
+
+  <!-- ============================HERO SECTION======================== --> 
 
   <!-- Hero Section -->
   <section id="home" class="hero">
@@ -46,82 +78,98 @@
     </div>
   </section>
 
+
+   <!-- ===========================FEATURES SECTION======================== -->
+
   <!-- Features Section -->
-<section id="features" class="features">
-  <div class="container">
-    <h2>Features</h2>
-    <p class="subtitle">Most calendars are designed for teams.<br>Slate is designed for freelancers</p>
-    <div class="feature-cards">
-      <div class="feature-card">
-        <i class="fas fa-font fa-2x"></i>
-        <h3>OpenType features<br>Variable fonts</h3>
-        <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
-      </div>
-      <div class="feature-card">
-        <i class="fas fa-pencil-ruler fa-2x"></i>
-        <h3>Design with real data</h3>
-        <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
-      </div>
-      <div class="feature-card">
-        <i class="fas fa-bolt fa-2x"></i>
-        <h3>Fastest way to take action</h3>
-        <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
+  <section id="features-section" class="scroll-reveal">
+    <div class="container">
+      <h2>Features</h2>
+      <p class="subtitle">Most calendars are designed for teams.<br>Slate is designed for freelancers</p>
+      <div class="feature-cards">
+        <div class="feature-card">
+          <i class="fas fa-font fa-2x"></i>
+          <h3>OpenType features<br>Variable fonts</h3>
+          <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-pencil-ruler fa-2x"></i>
+          <h3>Design with real data</h3>
+          <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-bolt fa-2x"></i>
+          <h3>Fastest way to take action</h3>
+          <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Video Section -->
-<section id="video-section" class="video-section">
-  <div class="video-container">
-    <video id="feature-video" width="100%" preload="metadata">
-      <source src="sample.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-    <div id="play-icon" class="play-icon">
-      <i class="fas fa-play"></i>
+
+  <!-- ======================================VIDEO SECTION======================== --> 
+
+  <!-- Video Section -->
+  <section id="video-section" class="video-section scroll-reveal">
+    <div class="video-container">
+      <video id="feature-video" width="100%" preload="metadata">
+        <source src="logos/sample.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <div id="play-icon" class="play-icon">
+        <i class="fas fa-play"></i>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Organize & Newsletter Section -->
-<section id="organize" class="organize-section">
-  <div class="container organize-container">
-    <!-- Left: Organize -->
+
+
+  <!-- ======================================ORGANIZE & NEWSLETTER SECTION======================== --> 
+  <!-- ===== Organize Section ===== -->
+<section id="organize">
+  <div class="organize-container">
+    <!-- Left: Text -->
     <div class="organize-left">
       <h2>Fastest way to organize</h2>
-      <p>Most calendars are designed for teams.<br>Slate is designed for freelancers</p>
-      <a href="#pricing" class="btn ripple">Try For Free</a>
+      <p>Most calendars are designed for teams. Slate is designed for freelancers.</p>
+      <a href="#" class="btn">Try For Free</a>
     </div>
 
+    <!-- Right: Image -->
     <div class="organize-right">
-      <img src="laptop.png" alt="Organize Feature" class="organize-img">
+      <img src="logos/laptop.png" alt="Laptop Preview" class="organize-img">
     </div>
   </div>
 </section>
 
-<!-- Newsletter Section -->
-<section id="newsletter" class="newsletter-section">
-  <div class="container newsletter-container">
+<!-- ===== Newsletter Section ===== -->
+<section id="newsletter">
+  <div class="newsletter-container">
+    <!-- Left: Illustration -->
     <div class="newsletter-left">
-      <img src="newsletter.png" alt="Newsletter Illustration">
+      <img src="logos/newsletter.png" alt="Newsletter Illustration">
     </div>
 
+    <!-- Right: Text & Form -->
     <div class="newsletter-right">
-      <p class="small-text">At your fingertips</p>
+      <div class="small-text">At your fingertips</div>
       <h2>Lightning fast prototyping</h2>
-      <p><strong>Subscribe to our Newsletter</strong><br>
-        Available exclusively on Figmaland</p>
+      <p>
+        <strong>Subscribe to our Newsletter</strong><br>
+        Available exclusively on Figmaland
+      </p>
       <form class="newsletter-form">
         <input type="email" placeholder="Your Email" required>
-        <button type="submit" class="btn ripple">Subscribe</button>
+        <button type="submit" class="btn">Subscribe</button>
       </form>
     </div>
   </div>
 </section>
 
-<!-- Partners Section -->
-<section id="partners" class="partners-section">
+<!-- =========================PARTNERS SECTION======================== --> 
+ <!-- Partners Section -->
+
+<section id="partners" class="partners-section scroll-reveal">
   <div class="container">
     <h2>Partners</h2>
     <p class="subtitle">
@@ -129,52 +177,55 @@
       Slate is designed for freelancers
     </p>
 
-<div class="partners-grid">
-  <div class="partner-card" data-aos="fade-up" data-aos-delay="100">
-    <p>Client Name</p>
-    <img src="logos/google.png" alt="Google">
-  </div>
-  <div class="partner-card" data-aos="fade-up" data-aos-delay="200">
-    <p>Client Name</p>
-    <img src="logos/amazon.png" alt="Amazon">
-  </div>
-  <div class="partner-card" data-aos="fade-up" data-aos-delay="300">
-    <p>Client Name</p>
-    <img src="logos/microsoft.png" alt="Microsoft">
-  </div>
-  <div class="partner-card" data-aos="fade-up" data-aos-delay="400">
-    <p>Client Name</p>
-    <img src="logos/uber.png" alt="Uber">
-  </div>
-  <div class="partner-card" data-aos="fade-up" data-aos-delay="100">
-    <p>Client Name</p>
-    <img src="logos/dropbox.png" alt="Dropbox">
-  </div>
-  <div class="partner-card" data-aos="fade-up" data-aos-delay="200">
-    <p>Client Name</p>
-    <img src="logos/google.png" alt="Google">
-  </div>
-  <div class="partner-card" data-aos="fade-up" data-aos-delay="300">
-    <p>Client Name</p>
-    <img src="logos/uber.png" alt="Uber">
-  </div>
-  <div class="partner-card" data-aos="fade-up" data-aos-delay="400">
-    <p>Client Name</p>
-    <img src="logos/amazon.png" alt="Amazon">
-  </div>
-</div>
-<a href="#pricing" class="btn ripple">Try For Free</a>
+    <div class="partners-grid">
+      <div class="partner-card">
+        <p>Client Name</p>
+        <img src="logos/google.png" alt="Google">
+      </div>
+      <div class="partner-card">
+        <p>Client Name</p>
+        <img src="logos/amazon.png" alt="Amazon">
+      </div>
+      <div class="partner-card">
+        <p>Client Name</p>
+        <img src="logos/microsoft.png" alt="Microsoft">
+      </div>
+      <div class="partner-card">
+        <p>Client Name</p>
+        <img src="logos/uber.png" alt="Uber">
+      </div>
+      <div class="partner-card">
+        <p>Client Name</p>
+        <img src="logos/dropbox.png" alt="Dropbox">
+      </div>
+      <div class="partner-card">
+        <p>Client Name</p>
+        <img src="logos/google.png" alt="Google">
+      </div>
+      <div class="partner-card">
+        <p>Client Name</p>
+        <img src="logos/uber.png" alt="Uber">
+      </div>
+      <div class="partner-card">
+        <p>Client Name</p>
+        <img src="logos/amazon.png" alt="Amazon">
+      </div>
+    </div>
+    
+    <a href="#pricing" class="btn ripple">Try For Free</a>
   </div>
 </section>
 
 
-<!-- ✅ Testimonial Section -->
-<section class="testimonial-section">
+<!-- ========================TESTIMONIALS SECTION======================== --> 
+ <!-- ✅ Testimonial Section -->
+<section id="testimonial" class="testimonial-section scroll-reveal">
   <h2>Testimonials</h2>
+
   <div class="testimonial-container">
     <!-- Slide 1 -->
     <div class="testimonial-slide active">
-      <img src="https://1000logos.net/wp-content/uploads/2016/10/IBM-logo.png" alt="IBM" class="company-logo" />
+      <img src="logos/ibm.jpg" alt="IBM" class="company-logo" />
       <p class="testimonial-text">
         Most calendars are designed for teams. Slate is designed for freelancers
         who want a simple way to plan their schedule.
@@ -223,15 +274,16 @@
 
   <!-- Dots -->
   <div class="testimonial-dots">
-    <span class="dot active"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
+    <span class="dot active" data-slide="0"></span>
+    <span class="dot" data-slide="1"></span>
+    <span class="dot" data-slide="2"></span>
   </div>
 </section>
 
 
-<!-- ✅ Pricing Section -->
-<section class="pricing-section">
+<!-- ===============================PRICING SECTION======================== --> 
+ <!-- ✅ Pricing Section -->
+<section class="pricing-section fade-section">
   <h2>Pricing</h2>
   <p>Most calendars are designed for teams. Slate is designed for freelancers</p>
 
@@ -284,65 +336,74 @@
 </section>
 
 
-<!-- Contact Section -->
-<section id="contact" class="contact-section">
+<!-- ===========================CONTACT SECTION======================== -->
+
+<section class="contact-section" id="contact">
   <h2>Contact Us</h2>
-  <p>Most calendars are designed for teams.<br>Slate is designed for freelancers</p>
+  <p>We’d love to hear from you. Reach out to us anytime!</p>
 
   <div class="contact-container">
+    
     <!-- Contact Form -->
     <div class="contact-form">
       <h3>Contact Us</h3>
-      <form id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
+      <form action="#" method="post">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
         <button type="submit" class="send-btn">Send</button>
       </form>
     </div>
 
-    <!-- Contact Details -->
+    <!-- Contact Info -->
     <div class="contact-info">
-      <div class="info-item">
-        <span>📍</span>
-        <p>6386 Spring St undefined Anchorage,<br>Georgia 12473 United States</p>
-      </div>
-      <div class="info-item">
-        <span>📞</span>
-        <p>(843) 555-0130</p>
-      </div>
-      <div class="info-item">
-        <span>✉️</span>
-        <p>willie.jennings@example.com</p>
+
+      <!-- Contact Details Row -->
+      <div class="contact-details-row">
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>123 MG Road, Bengaluru,<br>Karnataka, India</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone-alt"></i>
+          <p>+91 98765 43210</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <p>contact@yourcompany.com</p>
+        </div>
       </div>
 
-      <!-- Google Map -->
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.123!2d-122.419415!3d37.774929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c77c8c9fb%3A0xdddddddd!2sSan%20Francisco!5e0!3m2!1sen!2sus!4v1682520000000"
-        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <!-- Google Map (India Location) -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.069127726253!2d77.594562!3d12.971598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670f0f0f0f%3A0xf0f0f0f0f0f0f0f0!2sMG%20Road%2C%20Bengaluru%2C%20Karnataka%2C%20India!5e0!3m2!1sen!2sin!4v1693000000000!5m2!1sen!2sin"
+        width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
 
-      <!-- Social Links -->
-      <div class="social-icons">
-       <i class="fab fa-twitter"></i>
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-linkedin"></i>
+      <!-- Social Icons -->
+      <div class="contact-social">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-linkedin-in"></i>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- Modal -->
-<div id="successModal" class="modal">
+<div id="modal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Your query sent successfully</p>
+    <p>Your message has been sent successfully!</p>
   </div>
 </div>
 
-
-<!-- Footer Section -->
-<footer class="footer">
+<!-- =============================================== FOOTER ========================  -->
+ <!-- Footer Section -->
+<footer id="custom-footer">
   <div class="footer-container">
+    
     <!-- Pages -->
     <div class="footer-col">
       <h4>Pages</h4>
@@ -389,21 +450,27 @@
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
+
   </div>
 </footer>
 
 
-  <script src="script.js"></script>
-  <!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,  // animation speed (1s)
-    once: true       // animation happens only once
-  });
-</script>
+
+    <!-- =========================== SCRIPTS ========================== -->
+
+
+  <!-- Overlay for mobile menu -->
+  <div id="menu-overlay"></div>
+
+  <!-- JS -->
+  <script src="js/script.js"></script>
+  <script src="js/video-section.js"></script>
+  <script src="js/scroll-animations.js"></script>
+  <script src="js/testimonial.js"></script>
+  <script src="js/contact.js"></script>
 
 </body>
 </html>
 
 
+    

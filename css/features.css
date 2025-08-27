@@ -1,0 +1,73 @@
+/* ====== Features Section ====== */
+#features-section {
+  padding: 80px 20px;
+  background: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+#features-section h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #1b2733;
+  margin-bottom: 15px;
+}
+
+#features-section .subtitle {
+  font-size: 18px;
+  color: #6b7a8f;
+  margin-bottom: 50px;
+  line-height: 1.5;
+}
+
+#features-section .feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+#features-section .feature-card {
+  max-width: 300px;
+}
+
+#features-section .feature-card i {
+  color: #2196f3;
+  margin-bottom: 20px;
+}
+
+#features-section .feature-card h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1b2733;
+  line-height: 1.4;
+}
+
+#features-section .feature-card p {
+  font-size: 14px;
+  color: #6b7a8f;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #features-section .feature-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+/* Features Section Animation */
+#features {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#features.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

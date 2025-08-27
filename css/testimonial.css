@@ -1,0 +1,149 @@
+/* ===== Testimonial Section ===== */
+.testimonial-section {
+  padding: 80px 20px;
+  background-color: #f8f9fc;
+  text-align: center;
+
+  /* Animation initial state */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.testimonial-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.testimonial-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 40px;
+}
+
+.testimonial-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.testimonial-slide {
+  display: none;
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.testimonial-slide.active {
+  display: block;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.company-logo {
+  max-width: 140px;
+  margin-bottom: 25px;
+}
+
+.testimonial-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.author img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author strong {
+  font-size: 16px;
+  color: #2d2d2d;
+}
+
+.author span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* ===== Dots ===== */
+.testimonial-dots {
+  margin-top: 30px;
+}
+
+.testimonial-dots .dot {
+  height: 12px;
+  width: 12px;
+  background-color: #2196f3;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.testimonial-dots .dot.active {
+  background-color: #fff;
+  border: 2px solid #2196f3;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+  .testimonial-section {
+    padding: 60px 15px;
+  }
+
+  .testimonial-section h2 {
+    font-size: 28px;
+  }
+
+  .testimonial-slide {
+    padding: 35px 20px;
+  }
+
+  .testimonial-text {
+    font-size: 16px;
+  }
+
+  .company-logo {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-section h2 {
+    font-size: 24px;
+  }
+
+  .testimonial-text {
+    font-size: 15px;
+  }
+
+  .author img {
+    width: 45px;
+    height: 45px;
+  }
+}
